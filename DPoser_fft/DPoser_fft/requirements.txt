@@ -1,0 +1,20 @@
+#conda install cudatoolkit=11.3 -c nvidia
+#pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 --extra-index-url https://download.pytorch.org/whl/cu113
+#apt-get update && apt-get install libgl1
+#apt-get install libglfw3-dev libgles2-mesa-dev
+#conda install -c fvcore -c iopath -c conda-forge fvcore iopath
+#conda install -c bottler nvidiacub
+#conda install pytorch3d -c pytorch3d: can't detect package
+#failed to build wheel: pip install "git+https://github.com/facebookresearch/pytorch3d.git"
+#but this works: pip install "git+https://github.com/facebookresearch/pytorch3d.git@stable", with cannot import name 'look_at_view_transform' from pytorch3d.renderer (unknown location)
+opencv-python
+absl-py
+ml-collections
+matplotlib
+pyrender
+torchgeometry
+pymeshlab
+smplx
+tensorboardX
+chumpy
+numpy==1.23

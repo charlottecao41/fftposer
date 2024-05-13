@@ -1,0 +1,10 @@
+python -m run.train --config configs/subvp/amass_scorefc_continuous.py --name reproduce --bodymodel-path body_models/smplx/SMPLX_NEUTRAL.npz
+
+python -m run.completion_cp --config configs/subvp/amass_scorefc_continuous.py --gpus 1 --hypo 10 --sample 10 --part legs --ckpt-path output/amass_amass/2024-03-11-03-43-25-reproduce/best_model.pth --bodymodel-path body_models/smplx/SMPLX_NEUTRAL.npz
+
+fft
+
+python -m run.completion_cp --config configs/subvp/amass_scorefc_continuous.py --gpus 1 --hypo 10 --sample 10 --part legs --ckpt-path ablation.pth --bodymodel-path body_models/smplx/SMPLX_NEUTRAL.npz
+
+python -m run.demo --config configs/subvp/amass_scorefc_continuous.py  --task generation --metrics --ckpt-path output/amass_amass/2024-03-18-07-56-19-reproduce/checkpoint-step1200000.pth --bodymodel-path body_models/smplx/SMPLX_NEUTRAL.npz
+
